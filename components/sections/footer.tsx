@@ -78,6 +78,17 @@ export default function Footer() {
 
       // Dot background parallax
       dotsParallax(containerRef.current);
+
+      // Creative animated border line
+      const borderLines = containerRef.current.querySelectorAll(".animated-border-line");
+      if (borderLines.length > 0) {
+        gsap.to(borderLines, {
+          x: "400%",
+          duration: 3.5,
+          ease: "linear",
+          repeat: -1,
+        });
+      }
     },
     { scope: containerRef }
   );
@@ -98,8 +109,17 @@ export default function Footer() {
     <footer
       id="contact"
       ref={containerRef}
-      className="relative bg-surface-950"
+      className="relative bg-surface-900"
     >
+      {/* Animated Top Border */}
+      <div className="absolute top-0 left-0 right-0 h-px w-full overflow-hidden bg-surface-800">
+        <div 
+          className="animated-border-line absolute top-0 bottom-0 left-0 w-1/4 bg-linear-to-r from-transparent via-accent-400 to-transparent opacity-70 -translate-x-full"
+        />
+        <div 
+          className="animated-border-line absolute top-0 bottom-0 left-0 w-1/4 bg-linear-to-r from-transparent via-accent-500 to-transparent blur-[2px] -translate-x-full"
+        />
+      </div>
 
       {/* Main CTA + Contact area */}
       <div className="relative mx-auto max-w-6xl px-6 py-20 md:px-10 lg:px-16">

@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/layout/header";
 import SidebarNav from "@/components/layout/sidebar-nav";
 import ScrollToTop from "@/components/ui/scroll-to-top";
+import NextTopLoader from "nextjs-toploader";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -90,6 +91,18 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-surface-950 text-surface-200">
+        <NextTopLoader 
+          color="#3b82f6" 
+          initialPosition={0.08} 
+          crawlSpeed={200} 
+          height={3} 
+          crawl={true} 
+          showSpinner={false} 
+          easing="ease" 
+          speed={200} 
+          shadow="0 0 10px #3b82f6,0 0 5px #3b82f6" 
+          zIndex={99999} 
+        />
         <Header />
         <SidebarNav />
         {children}

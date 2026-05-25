@@ -12,20 +12,25 @@ import { dotsParallax } from "@/lib/gsap/animations";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const DUMMY_PROJECTS: ProjectType[] = [
+const PROJECTS: ProjectType[] = [
   {
     id: "proj-1",
-    title: "Nexus Dashboard",
-    description: "A high-performance analytics dashboard for enterprise resource planning with real-time data visualization.",
+    title: "DTR Generator for Maclang",
+    description: "A modern, dynamic web application designed to encode Daily Time Records (DTR) and generate perfectly formatted Excel reports matching the Civil Service Form No. 48 standard. Built specifically for the needs of Maclang Hospital.",
+    image: "/dtr-generator-for-maclang-preview.png",
     icon: LayoutTemplate,
     tags: [
-      { label: "Next.js", iconName: "nextjs2" },
-      { label: "TailwindCSS", iconName: "tailwindcss" },
-      { label: "Recharts" },
-      { label: "Zustand", iconName: "zustand" }
+      { label: "React 19", iconName: "react" },
+      { label: "TypeScript", iconName: "typescript" },
+      { label: "Vite", iconName: "vitejs" },
+      { label: "Tailwind CSS v4", iconName: "tailwindcss" },
+      { label: "ExcelJS" },
+      { label: "Shadcn UI", iconName: "shadcnui" },
+      { label: "React Hook Form" }
     ],
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://dtr-generator-for-maclang.vercel.app/",
+    githubUrl: "https://github.com/kenfrianeza-dev/dtr-generator-for-maclang",
+    status: "done",
   },
   {
     id: "proj-2",
@@ -40,6 +45,7 @@ const DUMMY_PROJECTS: ProjectType[] = [
     ],
     liveUrl: "#",
     githubUrl: "#",
+    status: "in progress",
   },
   {
     id: "proj-3",
@@ -54,6 +60,7 @@ const DUMMY_PROJECTS: ProjectType[] = [
     ],
     liveUrl: "#",
     githubUrl: "#",
+    status: "in progress",
   }
 ];
 
@@ -120,7 +127,7 @@ export default function Projects() {
 
       {/* Projects Grid */}
       <div className="relative mx-auto mt-12 grid max-w-6xl gap-8 sm:grid-cols-2 lg:grid-cols-3 z-10">
-        {DUMMY_PROJECTS.map((project, index) => (
+        {PROJECTS.map((project, index) => (
           <ProjectCard key={project.id} project={project} index={index} />
         ))}
       </div>

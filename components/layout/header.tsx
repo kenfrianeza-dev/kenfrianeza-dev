@@ -22,18 +22,32 @@ export default function Header() {
   }, []);
 
   return (
-    <header
-      className={cn(
+    <>
+      {/* Mobile Backdrop */}
+      <div 
+        className={cn(
+          "fixed inset-0 z-40 bg-surface-950/60 backdrop-blur-sm transition-all duration-300 md:hidden",
+          mobileOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        )}
+        onClick={() => setMobileOpen(false)}
+        aria-hidden="true"
+      />
+
+      <header
+        className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
           ? "bg-surface-950/70 backdrop-blur-xl border-b border-surface-800/50 shadow-lg shadow-black/10"
-          : "bg-transparent"
+          : mobileOpen
+            ? "bg-surface-950/70 backdrop-blur-xl border-b border-surface-800/50 shadow-lg shadow-black/10 md:bg-transparent md:backdrop-blur-none md:border-transparent md:shadow-none"
+            : "bg-transparent"
       )}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-10">
         {/* Logo */}
         <a
           href="#hero"
+          onClick={() => setMobileOpen(false)}
           className="group flex items-center gap-1 text-xl font-bold tracking-tight text-surface-50 transition-colors duration-200"
         >
           KEN
@@ -103,5 +117,6 @@ export default function Header() {
         </nav>
       </div>
     </header>
+    </>
   );
 }

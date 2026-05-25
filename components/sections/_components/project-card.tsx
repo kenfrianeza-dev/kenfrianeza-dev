@@ -21,6 +21,7 @@ export interface ProjectType {
   tags: ProjectTag[];
   liveUrl: string;
   githubUrl: string;
+  status?: "done" | "in progress";
 }
 
 interface ProjectCardProps {
@@ -43,6 +44,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project, index }) => {
             src={project.image} 
             alt={project.title} 
             fill 
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover transition-transform duration-700 group-hover:scale-105"
           />
         ) : (
@@ -80,9 +82,32 @@ const ProjectCard: FC<ProjectCardProps> = ({ project, index }) => {
 
       {/* Content Area */}
       <div className="flex flex-1 flex-col p-6">
-        <h3 className="mb-2 text-xl font-bold text-surface-50 transition-colors duration-300 group-hover:text-accent-400">
-          {project.title}
-        </h3>
+        <div className="mb-2 flex items-start justify-between gap-4">
+          <h3 className="text-xl font-bold text-surface-50 transition-colors duration-300 group-hover:text-accent-400">
+            {project.title}
+          </h3>
+          {project.status && (
+            <span
+              className={`inline-flex shrink-0 items-center gap-1.5 rounded-full px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider border ${
+                project.status === "done"
+                  ? "bg-emerald-500/10 text-emerald-400 border-emerald-500/20"
+                  : "bg-amber-500/10 text-amber-400 border-amber-500/20"
+              }`}
+            >
+              <span className="relative flex h-1.5 w-1.5">
+                {project.status === "in progress" && (
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-75"></span>
+                )}
+                <span
+                  className={`relative inline-flex h-1.5 w-1.5 rounded-full ${
+                    project.status === "done" ? "bg-emerald-400" : "bg-amber-500"
+                  }`}
+                ></span>
+              </span>
+              {project.status}
+            </span>
+          )}
+        </div>
         <p className="mb-6 flex-1 text-sm text-surface-400 leading-relaxed">
           {project.description}
         </p>
