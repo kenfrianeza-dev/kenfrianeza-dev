@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { LinkedinIcon, GithubIcon } from "@/components/sections/_components/icons";
 import { sendEmail } from "@/app/actions";
+import { toast } from "sonner";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -105,12 +106,13 @@ export default function Footer() {
       if (result.success) {
         setSubmitted(true);
         setFormState({ name: "", email: "", message: "" });
+        toast.success("Message sent successfully!");
         setTimeout(() => setSubmitted(false), 3000);
       } else {
-        alert("Failed to send message: " + result.error);
+        toast.error(result.error || "Failed to send message");
       }
     } catch (error) {
-      alert("An unexpected error occurred.");
+      toast.error("An unexpected error occurred.");
     } finally {
       setIsSubmitting(false);
     }

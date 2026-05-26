@@ -35,14 +35,18 @@ const PROJECTS: ProjectType[] = [
   {
     id: "proj-2",
     title: "Next Prisma Postgres Template",
-    description: "A scalable authentication microservice with OAuth2, multi-tenant support, and biometric integration.",
+    description: "A modern, production-ready boilerplate for building full-stack web applications with Next.js, Prisma ORM, and PostgreSQL. Includes authentication, role-based access control, and a polished UI with shadcn/ui components.",
     image: "/nextjs-prisma-postgres-boilerplate-preview.png",
     icon: Database,
     tags: [
-      { label: "Node.js", iconName: "nodejs" },
-      { label: "Express", iconName: "expressjs" },
-      { label: "Redis", iconName: "redis" },
-      { label: "Docker", iconName: "docker" }
+      { label: "Next.js", iconName: "nextjs2" },
+      { label: "TypeScript", iconName: "typescript" },
+      { label: "Prisma", iconName: "prisma" },
+      { label: "PostgreSQL", iconName: "postgresql" },
+      { label: "Docker", iconName: "docker" },
+      { label: "Vite", iconName: "vitejs" },
+      { label: "Tailwind CSS", iconName: "tailwindcss" },
+      { label: "Shadcn UI", iconName: "shadcnui" }
     ],
     liveUrl: "#",
     githubUrl: "#",
@@ -127,7 +131,7 @@ export default function Projects() {
       </div>
 
       {/* Projects Grid */}
-      <div className="relative mx-auto mt-12 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-3 z-10">
+      <div className="relative mx-auto mt-12 grid max-w-6xl gap-6 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 z-10">
         {PROJECTS.map((project, index) => (
           <ProjectCard key={project.id} project={project} index={index} />
         ))}

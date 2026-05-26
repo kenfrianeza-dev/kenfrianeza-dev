@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Geist } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/header";
 import SidebarNav from "@/components/layout/sidebar-nav";
 import ScrollToTop from "@/components/ui/scroll-to-top";
 import NextTopLoader from "nextjs-toploader";
+import { Toaster } from "sonner";
+import { cn } from "@/lib/utils";
 
-const inter = Inter({
-  variable: "--font-sans",
-  subsets: ["latin"],
-  display: "swap",
-});
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 /* TODO: Replace with your actual deployed URL */
 const SITE_URL = "https://kenfrianeza.dev";
@@ -63,7 +61,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Ken Frianeza | Software Engineer",
+    title: "Ken Frianeza — Software Engineer",
     description:
       "Software Engineer building production-grade web applications that power real institutions. Specializing in performance optimization, clean architecture, and end-to-end deployment.",
     url: SITE_URL,
@@ -89,7 +87,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased`}>
+    <html lang="en" className={cn("h-full", "antialiased", "font-sans", geist.variable)}>
       <body className="min-w-[400px] min-h-full flex flex-col bg-surface-950 text-surface-200">
         <NextTopLoader 
           color="#3b82f6" 
@@ -107,6 +105,16 @@ export default function RootLayout({
         <SidebarNav />
         {children}
         <ScrollToTop />
+        <Toaster 
+          position="top-center" 
+          toastOptions={{
+            style: {
+              background: '#0f172a', // deep blue surface
+              border: '1px solid #3b82f6', // accent-500
+              color: '#60a5fa', // accent-400
+            }
+          }}
+        />
       </body>
     </html>
   );
