@@ -3,6 +3,7 @@
 import { FC } from "react";
 import { ExternalLink } from "lucide-react";
 import { GithubIcon } from "@/components/sections/_components/icons";
+import BorderGlow from "@/components/ui/border-glow";
 import type { LucideIcon } from "lucide-react";
 import StackIcon from "tech-stack-icons";
 import Image from "next/image";
@@ -33,11 +34,18 @@ const ProjectCard: FC<ProjectCardProps> = ({ project, index }) => {
   const Icon = project.icon;
 
   return (
-    <div 
+    <BorderGlow
       data-projects="card"
-      className="group relative flex flex-col overflow-hidden rounded-2xl border border-surface-800/60 bg-surface-900/40 backdrop-blur-md transition-all duration-500 hover:border-accent-500/30 hover:bg-surface-800/60 opacity-0"
+      className="group relative flex flex-col rounded-2xl transition-all duration-500 opacity-0 h-full w-full"
+      animated={false}
+      glowColor="210 100 60"
+      backgroundColor="#09090b"
+      borderRadius={16}
+      glowRadius={50}
+      colors={["#3b82f6", "#a855f7", "#ec4899"]}
     >
-      {/* Image / Placeholder Area */}
+      <div className="flex flex-col h-full overflow-hidden rounded-2xl border border-surface-800/60 bg-surface-900/40 backdrop-blur-md transition-all duration-500 hover:border-accent-500/30 hover:bg-surface-800/60">
+        {/* Image / Placeholder Area */}
       <div className="relative aspect-video w-full overflow-hidden bg-surface-950/50">
         {project.image ? (
           <Image 
@@ -126,8 +134,9 @@ const ProjectCard: FC<ProjectCardProps> = ({ project, index }) => {
             </span>
           ))}
         </div>
+        </div>
       </div>
-    </div>
+    </BorderGlow>
   );
 };
 

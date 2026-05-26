@@ -34,8 +34,9 @@ const PROJECTS: ProjectType[] = [
   },
   {
     id: "proj-2",
-    title: "OmniAuth Microservice",
+    title: "Next Prisma Postgres Template",
     description: "A scalable authentication microservice with OAuth2, multi-tenant support, and biometric integration.",
+    image: "/nextjs-prisma-postgres-boilerplate-preview.png",
     icon: Database,
     tags: [
       { label: "Node.js", iconName: "nodejs" },
@@ -126,7 +127,7 @@ export default function Projects() {
       </div>
 
       {/* Projects Grid */}
-      <div className="relative mx-auto mt-12 grid max-w-6xl gap-8 sm:grid-cols-2 lg:grid-cols-3 z-10">
+      <div className="relative mx-auto mt-12 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-3 z-10">
         {PROJECTS.map((project, index) => (
           <ProjectCard key={project.id} project={project} index={index} />
         ))}

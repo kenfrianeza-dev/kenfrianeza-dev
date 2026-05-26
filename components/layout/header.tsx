@@ -85,7 +85,7 @@ export default function Header() {
               key={link.href}
               href={link.href}
               className={cn(
-                "relative px-4 py-2 text-sm font-medium text-surface-400 transition-colors duration-200",
+                "relative px-4 py-2 text-sm font-medium text-surface-100 transition-colors duration-200",
                 "hover:text-surface-50",
                 "after:absolute after:bottom-0.5 after:left-1/2 after:h-px after:w-0 after:bg-accent-500",
                 "after:transition-all after:duration-300 after:-translate-x-1/2",

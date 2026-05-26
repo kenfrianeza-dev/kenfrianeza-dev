@@ -15,6 +15,8 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import RippleGrid from "@/components/ui/ripple-grid";
+import Threads from "../ui/threads";
+import DarkVeil from "../ui/dark-veil";
 
 const TECH_STACK = [
   { label: "React", iconName: "react" },
@@ -45,20 +47,42 @@ export default function Hero() {
     >
       {/* Interactive RippleGrid background */}
       <div className="absolute inset-0 pointer-events-auto">
-        <RippleGrid
-          enableRainbow={false}
-          gridColor="#60A5FA"
-          rippleIntensity={0.03}
-          gridSize={10}
-          gridThickness={10}
-          gridRotation={45}
-          mouseInteraction={true}
-          mouseInteractionRadius={1.7}
-          opacity={0.4}
-          glowIntensity={0.05}
-          fadeDistance={3}
-          vignetteStrength={1.4}
-        />
+                {/* <DarkVeil /> */}
+          <RippleGrid
+            enableRainbow={false}
+            gridColor="#60A5FA"
+            rippleIntensity={0.03}
+            gridSize={10}
+            gridThickness={100}
+            gridRotation={0}
+            mouseInteraction={true}
+            mouseInteractionRadius={1.7}
+            opacity={0.2}
+            glowIntensity={0.05}
+            fadeDistance={3}
+            vignetteStrength={5}
+          />
+          <RippleGrid
+            enableRainbow={false}
+            gridColor="#60A5FA"
+            rippleIntensity={0.03}
+            gridSize={7}
+            gridThickness={100}
+            gridRotation={45}
+            mouseInteraction={true}
+            mouseInteractionRadius={2}
+            opacity={0.2}
+            glowIntensity={0.05}
+            fadeDistance={10}
+            vignetteStrength={5}
+          />
+
+        {/* <Threads 
+          color={[1,1,1]}
+          amplitude={1}
+          distance={1.5}
+          enableMouseInteraction={true}
+        /> */}
       </div>
 
       {/* Bottom gradient transition */}
@@ -93,12 +117,12 @@ export default function Hero() {
 
         {/* Sub-headline */}
 
-<p
+        <p
           data-hero="subheadline"
           className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-surface-400 opacity-0 md:text-xl"
         >
           I build production-grade web applications that power{" "}
-          <span className="text-surface-200 font-medium">real institutions</span>, 
+          <span className="text-surface-200 font-medium">real institutions</span>,
           specializing in <span className="text-surface-200 font-medium">performance</span>,{" "}
           <span className="text-surface-200 font-medium">clean architecture</span>, and{" "}
           <span className="text-surface-200 font-medium">end-to-end deployment</span>.
