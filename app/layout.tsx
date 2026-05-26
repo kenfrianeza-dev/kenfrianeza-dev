@@ -88,7 +88,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={cn("h-full", "antialiased", "font-sans", geist.variable)}>
-      <body className="min-w-[400px] min-h-full flex flex-col bg-surface-950 text-surface-200">
+      <body className="min-w-[320px] overflow-x-hidden min-h-full flex flex-col bg-surface-950 text-surface-200">
         <NextTopLoader 
           color="#3b82f6" 
           initialPosition={0.08} 
