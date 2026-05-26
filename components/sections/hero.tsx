@@ -14,7 +14,7 @@ import {
   Plus,
 } from "lucide-react";
 import Link from "next/link";
-import StackIcon from "tech-stack-icons";
+import RippleGrid from "@/components/ui/ripple-grid";
 
 const TECH_STACK = [
   { label: "React", iconName: "react" },
@@ -43,25 +43,26 @@ export default function Hero() {
       ref={containerRef}
       className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-surface-950 px-6 md:px-12 lg:px-24"
     >
-      {/* Grid pattern background — parallax */}
-      <div
-        data-parallax="dots"
-        className="bg-grid absolute -inset-y-24 inset-x-0 pointer-events-none [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_30%,transparent_100%)]"
-      />
+      {/* Interactive RippleGrid background */}
+      <div className="absolute inset-0 pointer-events-auto">
+        <RippleGrid
+          enableRainbow={false}
+          gridColor="#60A5FA"
+          rippleIntensity={0.03}
+          gridSize={10}
+          gridThickness={10}
+          gridRotation={45}
+          mouseInteraction={true}
+          mouseInteractionRadius={1.7}
+          opacity={0.4}
+          glowIntensity={0.05}
+          fadeDistance={3}
+          vignetteStrength={1.4}
+        />
+      </div>
 
       {/* Bottom gradient transition */}
       <div className="absolute bottom-0 left-0 right-0 z-0 h-48 bg-linear-to-t from-surface-950 to-transparent pointer-events-none" />
-
-      {/* Radial glow behind content */}
-      <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
-        style={{
-          width: "clamp(400px, 60vw, 900px)",
-          height: "clamp(400px, 60vw, 900px)",
-          background:
-            "radial-gradient(circle, rgba(59,130,246,0.06) 0%, transparent 70%)",
-        }}
-      />
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-4xl text-center">
