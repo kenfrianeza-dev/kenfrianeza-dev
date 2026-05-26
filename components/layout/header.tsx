@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
-  { href: "#projects", label: "Projects" },
-  { href: "#skills", label: "Skills" },
   { href: "#experience", label: "Experience" },
   { href: "#education", label: "Education" },
+  { href: "#projects", label: "Projects" },
+  { href: "#skills", label: "Skills" },
   { href: "#contact", label: "Contact" },
 ] as const;
 
@@ -18,7 +18,14 @@ export default function Header() {
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    
+    const handleCloseMenu = () => setMobileOpen(false);
+    window.addEventListener("closeMobileMenu", handleCloseMenu);
+    
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("closeMobileMenu", handleCloseMenu);
+    };
   }, []);
 
   return (
@@ -48,11 +55,26 @@ export default function Header() {
         <a
           href="#hero"
           onClick={() => setMobileOpen(false)}
-          className="group flex items-center gap-1 text-xl font-bold tracking-tight text-surface-50 transition-colors duration-200"
+          className="group flex items-center gap-1.5 text-xl font-bold tracking-tight text-surface-50 transition-colors duration-200"
         >
-          KEN
-          <span className="text-accent-500 transition-transform duration-300 group-hover:translate-x-0.5">
-            .
+          <span className="relative flex h-1.5 w-1.5 transition-transform duration-300 group-hover:-translate-x-1 translate-y-[-5.5px]">
+            {/* Animated Wiring - Top Left */}
+            <span className="absolute top-1/2 right-1/2 h-px w-0 -translate-y-1/4 bg-accent-500 transition-all duration-500 ease-out group-hover:w-4 opacity-0 group-hover:opacity-100"></span>
+            <span className="absolute bottom-1/2 left-1/2 w-px h-0 -translate-x-1/4 bg-accent-500 transition-all duration-500 ease-out group-hover:h-3 opacity-0 group-hover:opacity-100"></span>
+            
+            <span className="absolute inline-flex h-full w-full animate-ping bg-accent-500 opacity-75"></span>
+            <span className="relative inline-flex h-1.5 w-1.5 bg-accent-500"></span>
+          </span>
+          <span className="transition-all duration-300 group-hover:text-white group-hover:[text-shadow:0_0_15px_var(--color-accent-500)]">
+            KEN
+          </span>
+          <span className="relative flex h-1.5 w-1.5 transition-transform duration-300 group-hover:translate-x-1 translate-y-[5.5px]">
+            {/* Animated Wiring - Bottom Right */}
+            <span className="absolute top-1/2 left-1/2 h-px w-0 -translate-y-1/4 bg-accent-500 transition-all duration-500 ease-out group-hover:w-4 opacity-0 group-hover:opacity-100"></span>
+            <span className="absolute top-1/2 left-1/2 w-px h-0 -translate-x-1/4 bg-accent-500 transition-all duration-500 ease-out group-hover:h-3 opacity-0 group-hover:opacity-100"></span>
+
+            <span className="absolute inline-flex h-full w-full animate-ping bg-accent-500 opacity-75"></span>
+            <span className="relative inline-flex h-1.5 w-1.5 bg-accent-500"></span>
           </span>
         </a>
 

@@ -90,7 +90,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-surface-950 text-surface-200">
+      <body className="min-w-[400px] min-h-full flex flex-col bg-surface-950 text-surface-200">
         <NextTopLoader 
           color="#3b82f6" 
           initialPosition={0.08} 

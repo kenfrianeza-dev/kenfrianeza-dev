@@ -4,9 +4,9 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <Timeline />
       <Projects />
       <Skills />
-      <Timeline />
       <Footer />
     </main>
   );

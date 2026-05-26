@@ -83,7 +83,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project, index }) => {
       {/* Content Area */}
       <div className="flex flex-1 flex-col p-6">
         <div className="mb-2 flex items-start justify-between gap-4">
-          <h3 className="text-xl font-bold text-surface-50 transition-colors duration-300 group-hover:text-accent-400">
+          <h3 className="flex-1 min-w-0 text-xl font-bold text-surface-50 transition-colors duration-300 group-hover:text-accent-400">
             {project.title}
           </h3>
           {project.status && (

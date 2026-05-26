@@ -28,6 +28,7 @@ export default function ScrollToTop() {
       top: 0,
       behavior: "smooth",
     });
+    window.dispatchEvent(new Event("closeMobileMenu"));
   };
 
   return (

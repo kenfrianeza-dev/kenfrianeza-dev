@@ -14,6 +14,7 @@ import {
   MessageSquare,
 } from "lucide-react";
 import { LinkedinIcon, GithubIcon } from "@/components/sections/_components/icons";
+import { sendEmail } from "@/app/actions";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -52,6 +53,7 @@ export default function Footer() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useGSAP(
     () => {
@@ -93,16 +95,25 @@ export default function Footer() {
     { scope: containerRef }
   );
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    // Build mailto link with form data as a simple fallback
-    const subject = encodeURIComponent(`Portfolio Contact from ${formState.name}`);
-    const body = encodeURIComponent(
-      `Name: ${formState.name}\nEmail: ${formState.email}\n\nMessage:\n${formState.message}`
-    );
-    window.open(`mailto:kenfrianeza.dev@gmail.com?subject=${subject}&body=${body}`, "_blank");
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
+    setIsSubmitting(true);
+    
+    try {
+      const result = await sendEmail(formState.name, formState.email, formState.message);
+      
+      if (result.success) {
+        setSubmitted(true);
+        setFormState({ name: "", email: "", message: "" });
+        setTimeout(() => setSubmitted(false), 3000);
+      } else {
+        alert("Failed to send message: " + result.error);
+      }
+    } catch (error) {
+      alert("An unexpected error occurred.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -182,10 +193,11 @@ export default function Footer() {
               {/* Submit */}
               <button
                 type="submit"
-                className="group inline-flex items-center gap-2 rounded-lg bg-accent-500 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-accent-600 hover:shadow-lg hover:shadow-accent-500/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2 focus-visible:ring-offset-surface-950 cursor-pointer"
+                disabled={isSubmitting || submitted}
+                className="group inline-flex items-center gap-2 rounded-lg bg-accent-500 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-accent-600 hover:shadow-lg hover:shadow-accent-500/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2 focus-visible:ring-offset-surface-950 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
               >
                 <Send className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-                {submitted ? "Message Sent!" : "Send Message"}
+                {isSubmitting ? "Sending..." : submitted ? "Message Sent!" : "Send Message"}
               </button>
             </form>
           </div>
