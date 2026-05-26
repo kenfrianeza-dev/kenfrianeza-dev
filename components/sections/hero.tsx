@@ -26,6 +26,7 @@ const TECH_STACK = [
   { label: "Python", iconName: "python" },
   { label: "PostgreSQL", iconName: "postgresql" },
 ];
+
 export default function Hero() {
   const containerRef = useRef<HTMLElement>(null);
 
@@ -39,6 +40,64 @@ export default function Hero() {
     { scope: containerRef }
   );
 
+  const RenderBackground = ({ variant = 'dark-veil' } : { variant?: 'dark-veil' | 'ripple-grid' | 'threads' }) => {
+    switch (variant) {
+      case "dark-veil":
+        return (
+          <DarkVeil
+            speed={0.85}
+            hueShift={360}
+            noiseIntensity={0}
+            scanlineFrequency={0}
+            scanlineIntensity={0}
+            warpAmount={2}
+          />
+        )
+      case "ripple-grid":
+        return (
+          <>
+            <RippleGrid
+              enableRainbow={false}
+              gridColor="#60A5FA"
+              rippleIntensity={0.03}
+              gridSize={10}
+              gridThickness={100}
+              gridRotation={0}
+              mouseInteraction={true}
+              mouseInteractionRadius={1.7}
+              opacity={0.2}
+              glowIntensity={0.05}
+              fadeDistance={3}
+              vignetteStrength={5}
+            />
+            <RippleGrid
+              enableRainbow={false}
+              gridColor="#60A5FA"
+              rippleIntensity={0.03}
+              gridSize={7}
+              gridThickness={100}
+              gridRotation={45}
+              mouseInteraction={true}
+              mouseInteractionRadius={2}
+              opacity={0.2}
+              glowIntensity={0.05}
+              fadeDistance={10}
+              vignetteStrength={5}
+            />
+          </>
+        )
+      case "threads":
+        return (
+          <Threads
+            color={[1, 1, 1]}
+            amplitude={1}
+            distance={1.5}
+            enableMouseInteraction={true}
+          />
+        )
+    }
+  }
+
   return (
     <section
       id="hero"
@@ -47,42 +106,7 @@ export default function Hero() {
     >
       {/* Interactive RippleGrid background */}
       <div className="absolute inset-0 pointer-events-auto">
-                {/* <DarkVeil /> */}
-          <RippleGrid
-            enableRainbow={false}
-            gridColor="#60A5FA"
-            rippleIntensity={0.03}
-            gridSize={10}
-            gridThickness={100}
-            gridRotation={0}
-            mouseInteraction={true}
-            mouseInteractionRadius={1.7}
-            opacity={0.2}
-            glowIntensity={0.05}
-            fadeDistance={3}
-            vignetteStrength={5}
-          />
-          <RippleGrid
-            enableRainbow={false}
-            gridColor="#60A5FA"
-            rippleIntensity={0.03}
-            gridSize={7}
-            gridThickness={100}
-            gridRotation={45}
-            mouseInteraction={true}
-            mouseInteractionRadius={2}
-            opacity={0.2}
-            glowIntensity={0.05}
-            fadeDistance={10}
-            vignetteStrength={5}
-          />
-
-        {/* <Threads 
-          color={[1,1,1]}
-          amplitude={1}
-          distance={1.5}
-          enableMouseInteraction={true}
-        /> */}
+        <RenderBackground variant="ripple-grid" />
       </div>
 
       {/* Bottom gradient transition */}
@@ -91,7 +115,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-4xl text-center">
         {/* Badge */}
-        <div data-hero="badge" className="mb-8 inline-flex items-center gap-2 rounded-full border border-surface-700 bg-surface-900/80 px-4 py-2 text-sm text-surface-400 opacity-0">
+        <div data-hero="badge" className="mb-8 inline-flex items-center gap-2 rounded-full border border-surface-700 bg-surface-900/50 px-4 py-2 text-sm text-surface-400 opacity-0">
           <span className="h-2 w-2 rounded-full bg-accent-500 animate-pulse" />
           <span className="text-accent-500">Available</span> for new opportunities
         </div>

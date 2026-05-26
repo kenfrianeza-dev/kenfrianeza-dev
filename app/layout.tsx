@@ -16,8 +16,8 @@ const SITE_URL = "https://kenfrianeza.dev";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Ken Frianeza | Software Engineer",
-    template: "%s | Ken Frianeza",
+    default: "Ken Frianeza — Software Engineer",
+    template: "%s — Ken Frianeza",
   },
   description:
     "Software Engineer building production-grade web applications that power real institutions. Specializing in performance optimization, clean architecture, and end-to-end feature deployment across React, Node.js, Laravel, and AWS.",
@@ -71,9 +71,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ken Frianeza | Software Engineer",
+    title: "Ken Frianeza — Software Engineer",
     description:
-      "Building production-grade web applications with clean architecture, performance optimization, and modern tech stacks.",
+      "I build production-grade web applications that power real institutions, specializing in performance, clean architecture, and end-to-end deployment.",
     creator: "@kenfrianeza",
   },
   alternates: {

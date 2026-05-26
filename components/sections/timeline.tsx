@@ -110,7 +110,7 @@ export default function Timeline() {
       <SectionHeader
         label="Architecture History"
         title="Experience & Education"
-        subTitle="A timeline of roles and milestones where I focused on clean architecture, performance optimization, and robust engineering."
+        subTitle="A timeline of roles and milestones where I focused on clean architecture, performance optimization and engineering."
       />
 
       {/* Timeline */}

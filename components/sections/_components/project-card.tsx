@@ -116,6 +116,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project, index }) => {
             </span>
           )}
         </div>
+        
         <p className="mb-6 flex-1 text-sm text-surface-400 leading-relaxed">
           {project.description}
         </p>

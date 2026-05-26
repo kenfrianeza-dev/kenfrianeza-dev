@@ -9,6 +9,7 @@ import { ProjectCard } from "@/components/sections/_components";
 import type { ProjectType } from "@/components/sections/_components/project-card";
 import { LayoutTemplate, Database, Smartphone } from "lucide-react";
 import { dotsParallax } from "@/lib/gsap/animations";
+import StarBorder from "@/components/ui/star-border";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -49,23 +50,22 @@ const PROJECTS: ProjectType[] = [
       { label: "Shadcn UI", iconName: "shadcnui" }
     ],
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/kenfrianeza-dev/nextjs-prisma-postgres-boilerplate",
     status: "in progress",
   },
   {
     id: "proj-3",
-    title: "Aura Mobile App",
-    description: "A cross-platform mobile application for mental health tracking with AI-driven insights and journaling.",
+    title: "Android Settings UI",
+    description: "A modern frontend showcase replicating the Android settings interface to demonstrate advanced UI development skills. Built entirely with React and Tailwind CSS, this project highlights pixel-perfect attention to native design patterns, responsive layouts, and modern aesthetics.",
+    image: "/android-settings-ui-preview.png",
     icon: Smartphone,
     tags: [
-      { label: "React Native", iconName: "react" },
-      { label: "Expo", iconName: "expo" },
-      { label: "GraphQL", iconName: "graphql" },
-      { label: "Firebase", iconName: "firebase" }
+      { label: "React 19", iconName: "react" },
+      { label: "Tailwind CSS", iconName: "tailwindcss" },
     ],
-    liveUrl: "#",
-    githubUrl: "#",
-    status: "in progress",
+    liveUrl: "https://ken-frianeza-android-settings-ui.vercel.app/",
+    githubUrl: "https://github.com/kenfrianeza-dev/android-settings-ui",
+    status: "done",
   }
 ];
 
@@ -135,6 +135,12 @@ export default function Projects() {
         {PROJECTS.map((project, index) => (
           <ProjectCard key={project.id} project={project} index={index} />
         ))}
+      </div>
+
+      <div className="text-center mt-12 flex justify-center">
+        <StarBorder as="div" color="var(--color-accent-500)" speed="5s" className="text-muted-foreground font-semibold">
+          Cooking up more projects 🔥 ...
+        </StarBorder>
       </div>
     </section>
   );

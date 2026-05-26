@@ -16,6 +16,7 @@ import {
 import { LinkedinIcon, GithubIcon } from "@/components/sections/_components/icons";
 import { sendEmail } from "@/app/actions";
 import { toast } from "sonner";
+import StackIcon from "tech-stack-icons";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -220,9 +221,9 @@ export default function Footer() {
                     href={item.href}
                     target={item.href.startsWith("http") ? "_blank" : undefined}
                     rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                    className="group flex items-start gap-4 rounded-xl border border-surface-800/40 bg-surface-900/30 p-4 transition-all duration-300 hover:border-accent-500/25 hover:bg-surface-800/40"
+                    className="group flex items-start gap-4 rounded-xl border border-surface-700/50 bg-surface-900/30 p-4 transition-all duration-300 hover:border-accent-500/25 hover:bg-surface-800/40"
                   >
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent-500/10 border border-accent-500/20 transition-colors duration-300 group-hover:bg-accent-500/15">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent-500/10 border border-accent-500/50 transition-colors duration-300 group-hover:bg-accent-500/15">
                       <Icon className="h-4 w-4 text-accent-400" />
                     </span>
                     <div className="flex-1 min-w-0">
@@ -256,8 +257,8 @@ export default function Footer() {
           <p className="text-xs text-surface-500">
             &copy; {new Date().getFullYear()} Ken Frianeza. Engineered with precision.
           </p>
-          <p className="text-xs text-surface-600">
-            Built with Next.js, Tailwind CSS & GSAP
+          <p className="text-xs text-surface-600 flex items-center justify-center gap-1">
+            Built with <StackIcon name="nextjs2" className="h-3 w-3" /> Next.js, Tailwind CSS, ShadcnUI, Reactbits & GSAP
           </p>
         </div>
       </div>
