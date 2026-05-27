@@ -65,8 +65,8 @@ const ProjectCard: FC<ProjectCardProps> = ({ project, index }) => {
           </div>
         )}
         
-        {/* Overlay links */}
-        <div className="absolute inset-0 bg-surface-950/60 opacity-0 backdrop-blur-sm transition-all duration-500 group-hover:opacity-100 flex items-center justify-center gap-4">
+        {/* Overlay links (Desktop Only) */}
+        <div className="absolute inset-0 bg-surface-950/60 opacity-0 backdrop-blur-sm transition-all duration-500 group-hover:opacity-100 hidden md:flex items-center justify-center gap-4">
           <a
             href={project.liveUrl}
             target="_blank"
@@ -134,6 +134,28 @@ const ProjectCard: FC<ProjectCardProps> = ({ project, index }) => {
               {tag.label}
             </span>
           ))}
+        </div>
+        
+        {/* Mobile Action Buttons (Visible only on small screens) */}
+        <div className="mt-6 flex items-center gap-3 md:hidden">
+          <a
+            href={project.liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-accent-500/10 border border-accent-500/20 py-2.5 text-sm font-semibold text-accent-400 transition-colors hover:bg-accent-500/20"
+          >
+            <ExternalLink className="h-4 w-4" />
+            Preview
+          </a>
+          <a
+            href={project.githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-surface-800 border border-surface-700 py-2.5 text-sm font-medium text-surface-300 transition-colors hover:text-surface-50 hover:bg-surface-700"
+          >
+            <GithubIcon className="h-4 w-4" />
+            GitHub
+          </a>
         </div>
         </div>
       </div>

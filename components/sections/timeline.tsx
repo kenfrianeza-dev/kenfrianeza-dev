@@ -185,20 +185,20 @@ function TimelineItem({
       <div
         data-timeline="card"
         className={`
-          flex-1 opacity-0
+          flex-1 min-w-0 opacity-0
           md:flex-none md:w-[calc(50%-40px)]
           ${isEven ? "md:mr-auto md:pr-4" : "md:ml-auto md:pl-4"}
         `}
       >
         <Card>
           <CardHeader>
-            <div>
-              <CardTitle>{entry.title}</CardTitle>
-              <p className="mt-1 text-sm text-surface-500 whitespace-pre-wrap">{entry.subtitle}</p>
+            <div className="min-w-0">
+              <CardTitle className="wrap-break-word">{entry.title}</CardTitle>
+              <p className="mt-1 text-sm text-surface-500 whitespace-pre-wrap wrap-break-word">{entry.subtitle}</p>
             </div>
-            <CardBadge>{entry.year}</CardBadge>
+            <CardBadge className="shrink-0">{entry.year}</CardBadge>
           </CardHeader>
-          <CardDescription>{entry.description}</CardDescription>
+          <CardDescription className="wrap-break-word">{entry.description}</CardDescription>
           {entry.technologies.length > 0 && (
             <CardTechStack technologies={entry.technologies} />
           )}

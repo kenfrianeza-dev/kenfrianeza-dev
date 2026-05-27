@@ -125,8 +125,8 @@ export function timelineScrollReveal(container: HTMLElement) {
         ease: "none",
         scrollTrigger: {
           trigger: container,
-          start: "top 80%",
-          end: "bottom 20%",
+          start: "top 85%",
+          end: "bottom 85%",
           scrub: 0.5,
         },
       }
