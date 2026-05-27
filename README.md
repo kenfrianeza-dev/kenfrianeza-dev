@@ -1,71 +1,72 @@
-# My Portfolio
+<div align="center">
 
-A minimalist, high-performance personal developer portfolio showcasing my projects, skills, and experience. Built with a focus on modern aesthetics, smooth animations, and responsive design.
+# Hey, I'm Ken 👋
 
-## Features
+**Junior Software Developer · Full-Stack Engineer · Performance Enthusiast**
 
-- **Next.js App Router**: Utilizing the latest React features and optimized routing.
-- **Tailwind CSS**: For utility-first styling and a beautiful, custom design system.
-- **GSAP Animations**: Delivering smooth, highly performant scroll animations and dynamic visual effects.
-- **Responsive Design**: Ensures a seamless experience across all devices and screen sizes.
+*I build production-grade web applications that power real institutions.*
 
-## Technologies Used
+[![Portfolio](https://img.shields.io/badge/Portfolio-kenfrianeza.dev-3b82f6?style=for-the-badge&logo=vercel&logoColor=white)](https://kenfrianeza.dev)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0a66c2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/kenfrianeza)
+[![Email](https://img.shields.io/badge/Email-Say%20Hi-ea4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:kenfrianeza@gmail.com)
 
-- [Next.js](https://nextjs.org/)
-- [React](https://react.dev/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [GSAP (GreenSock Animation Platform)](https://gsap.com/)
+</div>
 
-## Getting Started
+---
 
-To run this project locally, follow these steps:
+### About Me
 
-### Prerequisites
+I'm a Computer Engineering graduate from the Philippines.
 
-Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
+- 🚀 Reduced a System Logs module load time from **10 minutes → 3 seconds** for 30M+ entries
+- 🔍 Optimized student search queries across a **30,000–40,000 population** dataset
+- ☁️ Manage **AWS** infrastructure: EC2, S3, CloudFront, Route 53
+- 🏗️ Focused on **clean architecture**, performance optimization, and end-to-end deployment
+- 🟢 Currently **open to new opportunities**
 
-### Installation
+---
 
-1. Clone the repository:
-   ```bash
-   git clone <your-repo-url>
-   ```
+### Tech Stack
 
-2. Navigate to the project directory:
-   ```bash
-   cd ken-dev-portfolio
-   ```
+**Frontend**
 
-3. Install the dependencies:
-   ```bash
-   npm install
-   # or
-   yarn install
-   # or
-   pnpm install
-   ```
+![React](https://img.shields.io/badge/React-20232a?style=flat-square&logo=react&logoColor=61dafb)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
+![Angular](https://img.shields.io/badge/Angular-dd0031?style=flat-square&logo=angular&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06b6d4?style=flat-square&logo=tailwindcss&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat-square&logo=typescript&logoColor=white)
 
-### Running the Development Server
+**Backend**
 
-Start the development server:
+![Laravel](https://img.shields.io/badge/Laravel-ff2d20?style=flat-square&logo=laravel&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![GraphQL](https://img.shields.io/badge/GraphQL-e10098?style=flat-square&logo=graphql&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776ab?style=flat-square&logo=python&logoColor=white)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+**Database & Infrastructure**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169e1?style=flat-square&logo=postgresql&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479a1?style=flat-square&logo=mysql&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232f3e?style=flat-square&logo=amazonwebservices&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ed?style=flat-square&logo=docker&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-fcc624?style=flat-square&logo=linux&logoColor=black)
 
-## Customization
+---
 
-To personalize this portfolio for yourself:
-- **Profile Data**: Update your personal information, resume data, and skills in the relevant components or data files.
-- **Projects**: Replace the placeholder projects with your own work in the data configuration.
-- **Styling**: Modify the `tailwind.config.ts` or `globals.css` to match your desired color palette and typography.
+### GitHub Stats
 
-## Deployment
+<div align="center">
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new) from the creators of Next.js. Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+![Ken's GitHub Stats](https://github-readme-stats.vercel.app/api?username=kenfrianeza-dev&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=3b82f6&icon_color=3b82f6&text_color=94a3b8)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=kenfrianeza-dev&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=3b82f6&text_color=94a3b8)
+
+</div>
+
+---
+
+<div align="center">
+
+*"Clean code always looks like it was written by someone who cares."*
+
+</div>
