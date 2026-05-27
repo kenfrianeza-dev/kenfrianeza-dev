@@ -229,7 +229,11 @@ void main() {
     resize();
 
     let animId: number;
+    let isVisible = true;
+
     const render = (t: number) => {
+      if (!isVisible) return; // Pause rendering when off-screen
+
       uniforms.iTime.value = t * 0.001;
 
       const lerpFactor = 0.1;
@@ -252,10 +256,30 @@ void main() {
       animId = requestAnimationFrame(render);
     };
 
-    animId = requestAnimationFrame(render);
+    // Use IntersectionObserver to pause rendering when out of view
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          isVisible = entry.isIntersecting;
+          if (isVisible) {
+            // Resume rendering
+            animId = requestAnimationFrame(render);
+          } else {
+            // Pause rendering
+            cancelAnimationFrame(animId);
+          }
+        });
+      },
+      { threshold: 0 }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
 
     const container = containerRef.current;
     return () => {
+      observer.disconnect();
       cancelAnimationFrame(animId);
       window.removeEventListener("resize", resize);
       if (mouseInteraction && container) {

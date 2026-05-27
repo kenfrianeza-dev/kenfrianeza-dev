@@ -141,8 +141,11 @@ export default function DarkVeil({
 
     const start = performance.now();
     let frame = 0;
+    let isVisible = true;
 
     const loop = () => {
+      if (!isVisible) return; // Pause rendering when off-screen
+
       program.uniforms.uTime.value = ((performance.now() - start) / 1000) * speed;
       program.uniforms.uHueShift.value = hueShift;
       program.uniforms.uNoise.value = noiseIntensity;
@@ -153,9 +156,25 @@ export default function DarkVeil({
       frame = requestAnimationFrame(loop);
     };
 
-    loop();
+    // Use IntersectionObserver to pause rendering when out of view
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          isVisible = entry.isIntersecting;
+          if (isVisible) {
+            frame = requestAnimationFrame(loop);
+          } else {
+            cancelAnimationFrame(frame);
+          }
+        });
+      },
+      { threshold: 0 }
+    );
+
+    observer.observe(canvas);
 
     return () => {
+      observer.disconnect();
       cancelAnimationFrame(frame);
       window.removeEventListener('resize', resize);
     };

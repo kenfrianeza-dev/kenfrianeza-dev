@@ -198,7 +198,10 @@ const Threads = ({
       container.addEventListener("mouseleave", handleMouseLeave);
     }
 
+    let isVisible = true;
     function update(t: number) {
+      if (!isVisible) return; // Pause rendering when off-screen
+
       if (enableMouseInteraction) {
         const smoothing = 0.05;
         currentMouse[0] += smoothing * (targetMouse[0] - currentMouse[0]);
@@ -214,9 +217,26 @@ const Threads = ({
       renderer.render({ scene: mesh });
       animationFrameId.current = requestAnimationFrame(update);
     }
-    animationFrameId.current = requestAnimationFrame(update);
+
+    // Use IntersectionObserver to pause rendering when out of view
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          isVisible = entry.isIntersecting;
+          if (isVisible) {
+            animationFrameId.current = requestAnimationFrame(update);
+          } else {
+            if (animationFrameId.current) cancelAnimationFrame(animationFrameId.current);
+          }
+        });
+      },
+      { threshold: 0 }
+    );
+
+    observer.observe(container);
 
     return () => {
+      observer.disconnect();
       if (animationFrameId.current)
         cancelAnimationFrame(animationFrameId.current);
       window.removeEventListener("resize", resize);
