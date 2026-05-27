@@ -87,7 +87,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("h-full", "antialiased", "font-sans", geist.variable)}>
+    <html lang="en" className={cn("h-full", "antialiased", "font-sans", geist.variable, "overflow-x-hidden")}>
       <body className="min-w-[320px] overflow-x-hidden min-h-full flex flex-col bg-surface-950 text-surface-200">
         <NextTopLoader 
           color="#3b82f6" 
