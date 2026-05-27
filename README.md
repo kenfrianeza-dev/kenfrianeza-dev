@@ -2,13 +2,13 @@
 
 # Hey, I'm Ken 👋
 
-**Junior Software Developer · Full-Stack Engineer · Performance Enthusiast**
+**Software Developer · Full-Stack Engineer · Performance Enthusiast**
 
 *I build production-grade web applications that power real institutions.*
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-kenfrianeza.dev-3b82f6?style=for-the-badge&logo=vercel&logoColor=white)](https://kenfrianeza.dev)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0a66c2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/kenfrianeza)
-[![Email](https://img.shields.io/badge/Email-Say%20Hi-ea4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:kenfrianeza@gmail.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-kenfrianeza.dev-3b82f6?style=for-the-badge&logo=vercel&logoColor=white)](https://kenfrianeza-dev.vercel.app/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0a66c2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ken-frianeza-18a598370/)
+[![Email](https://img.shields.io/badge/Email-Say%20Hi-ea4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:kenfrianeza.dev@gmail.com)
 
 </div>
 
