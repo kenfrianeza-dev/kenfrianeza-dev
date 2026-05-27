@@ -57,9 +57,9 @@ I'm a Computer Engineering graduate from the Philippines.
 
 <div align="center">
 
-![Ken's GitHub Stats](https://github-readme-stats.vercel.app/api?username=kenfrianeza-dev&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=3b82f6&icon_color=3b82f6&text_color=94a3b8)
+[![GitHub Streak](https://streak-stats.demolab.com/?user=kenfrianeza-dev&theme=github-dark-blue&hide_border=true&background=0d1117&ring=3b82f6&fire=3b82f6&currStreakLabel=3b82f6&dates=94a3b8&sideLabels=94a3b8&currStreakNum=e2e8f0&sideNums=e2e8f0)](https://git.io/streak-stats)
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=kenfrianeza-dev&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=3b82f6&text_color=94a3b8)
+[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=kenfrianeza-dev&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=3b82f6&text_color=94a3b8&langs_count=8)](https://github.com/kenfrianeza-dev)
 
 </div>
 
