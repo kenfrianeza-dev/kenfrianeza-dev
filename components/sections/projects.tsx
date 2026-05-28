@@ -21,10 +21,10 @@ const PROJECTS: ProjectType[] = [
     image: "/dtr-generator-for-maclang-preview.png",
     icon: LayoutTemplate,
     tags: [
-      { label: "React 19", iconName: "react" },
+      { label: "React.js", iconName: "react" },
       { label: "TypeScript", iconName: "typescript" },
       { label: "Vite", iconName: "vitejs" },
-      { label: "Tailwind CSS v4", iconName: "tailwindcss" },
+      { label: "Tailwind CSS", iconName: "tailwindcss" },
       { label: "ExcelJS" },
       { label: "Shadcn UI", iconName: "shadcnui" },
       { label: "React Hook Form" }
@@ -60,7 +60,8 @@ const PROJECTS: ProjectType[] = [
     image: "/android-settings-ui-preview.png",
     icon: Smartphone,
     tags: [
-      { label: "React 19", iconName: "react" },
+      { label: "React.js", iconName: "react" },
+      { label: "Vite", iconName: "vitejs" },
       { label: "Tailwind CSS", iconName: "tailwindcss" },
     ],
     liveUrl: "https://ken-frianeza-android-settings-ui.vercel.app/",

@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ken Frianeza — Software Engineer",
     description:
-      "Software Engineer building production-grade web applications that power real institutions. Specializing in performance optimization, clean architecture, and end-to-end deployment.",
+      "I value clean architecture, maintainable code, and systems that don’t just work — but continue to scale and support real users over time.",
     url: SITE_URL,
     siteName: "Ken Frianeza — Portfolio",
     locale: "en_US",
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Ken Frianeza — Software Engineer",
     description:
-      "I build production-grade web applications that power real institutions, specializing in performance, clean architecture, and end-to-end deployment.",
+      "I value clean architecture, maintainable code, and systems that don’t just work — but continue to scale and support real users over time.",
     creator: "@kenfrianeza",
   },
   alternates: {

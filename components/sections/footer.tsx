@@ -253,12 +253,12 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="relative px-6 py-6">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 sm:flex-row">
-          <p className="text-xs text-surface-500">
+        <div className="mx-auto flex max-w-6xl flex-col items-center gap-2 sm:flex-row sm:justify-between">
+          <p className="text-xs text-surface-500 text-center sm:text-left">
             &copy; {new Date().getFullYear()} Ken Frianeza. Engineered with precision.
           </p>
-          <p className="text-xs text-surface-600 flex items-center justify-center gap-1">
-            Built with <StackIcon name="nextjs2" className="h-3 w-3" /> Next.js, Tailwind CSS, ShadcnUI, Reactbits & GSAP
+          <p className="text-xs text-surface-600 flex flex-wrap items-center justify-center gap-1 sm:flex-nowrap sm:justify-end">
+            Built with <StackIcon name="nextjs2" className="h-3 w-3 shrink-0" /> Next.js, Tailwind CSS, ShadcnUI, Reactbits &amp; GSAP
           </p>
         </div>
       </div>

@@ -145,11 +145,7 @@ export default function Hero() {
           data-hero="subheadline"
           className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-surface-400 opacity-0 md:text-xl"
         >
-          I build production-grade web applications that power{" "}
-          <span className="text-surface-200 font-medium">real institutions</span>,
-          specializing in <span className="text-surface-200 font-medium">performance</span>,{" "}
-          <span className="text-surface-200 font-medium">clean architecture</span>, and{" "}
-          <span className="text-surface-200 font-medium">end-to-end deployment</span>.
+          I value clean architecture, maintainable code and systems that don&apos;t just work — but continue to scale and support real users over time.
         </p>
 
         {/* CTA Buttons */}

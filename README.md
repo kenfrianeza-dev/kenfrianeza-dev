@@ -4,7 +4,7 @@
 
 **Software Developer · Full-Stack Engineer · Performance Enthusiast**
 
-*I build production-grade web applications that power real institutions.*
+*II value clean architecture, maintainable code, and systems that don’t just work — but continue to scale and support real users over time.*
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-kenfrianeza.dev-3b82f6?style=for-the-badge&logo=vercel&logoColor=white)](https://kenfrianeza-dev.vercel.app/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0a66c2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ken-frianeza-18a598370/)
