@@ -2,7 +2,7 @@
 
 # Hey, I'm Ken 👋
 
-**Software Developer · Full-Stack Engineer · Performance Enthusiast**
+**Software Engineer · Performance Enthusiast**
 
 *II value clean architecture, maintainable code, and systems that don’t just work — but continue to scale and support real users over time.*
 

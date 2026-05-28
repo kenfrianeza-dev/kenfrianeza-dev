@@ -31,7 +31,7 @@ const TIMELINE_DATA: TimelineEntry[] = [
   // ── Work Experience ──
   {
     year: "2024",
-    title: "Junior Software Developer",
+    title: "Software Developer",
     subtitle: "Ascendens Asia \nJuly 2024 – Present",
     description:
       "Reduced System Logs module load time from 10 minutes to 3 seconds for over 30 million log entries by optimizing SQL queries and implementing efficient pagination. Optimized student search queries across a 30,000–40,000 population. Deployed feature branches to UAT and Production environments. Configured and maintained AWS EC2, S3, CloudFront, and Route 53 infrastructure. Built complex SQL queries for automated CSV reporting.",
