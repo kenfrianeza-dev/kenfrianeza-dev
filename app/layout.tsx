@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s — Ken Frianeza",
   },
   description:
-    "Software Engineer building production-grade web applications that power real institutions. Specializing in performance optimization, clean architecture, and end-to-end feature deployment across React, Node.js, Laravel, and AWS.",
+    "I value clean architecture, maintainable code and systems that don't just work — but continue to scale and support real users over time.",
   keywords: [
     "Ken Frianeza",
     "Software Engineer",
@@ -79,6 +79,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: SITE_URL,
   },
+  verification: {
+    google: "Z6JTKz0cnMCUaybnsRBlQYso2U8-q1uZJh3_gnxBICE"
+  }
 };
 
 export default function RootLayout({
