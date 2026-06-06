@@ -153,7 +153,7 @@ export default function Hero() {
           {/* ── Unique Resume Button (Dead Center) ── */}
           <Link
             data-hero="cta"
-            href="/cv-updated-2-6-26_compressed.pdf"
+            href="/cv-updated-5-27-26_compressed.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="resume-btn group inline-flex items-center gap-3 rounded-xl border border-surface-700/60 bg-surface-900 px-7 py-3.5 text-sm font-semibold text-surface-200 opacity-0 transition-colors duration-300 hover:text-accent-400 cursor-pointer select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500"

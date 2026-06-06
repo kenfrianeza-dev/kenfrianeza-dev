@@ -32,6 +32,7 @@ const PROJECTS: ProjectType[] = [
     liveUrl: "https://dtr-generator-for-maclang.vercel.app/",
     githubUrl: "https://github.com/kenfrianeza-dev/dtr-generator-for-maclang",
     status: "done",
+    liveUrlDisabled: false
   },
   {
     id: "proj-2",
@@ -52,6 +53,7 @@ const PROJECTS: ProjectType[] = [
     liveUrl: "#",
     githubUrl: "https://github.com/kenfrianeza-dev/nextjs-prisma-postgres-boilerplate",
     status: "in progress",
+    liveUrlDisabled: true
   },
   {
     id: "proj-3",
@@ -67,6 +69,7 @@ const PROJECTS: ProjectType[] = [
     liveUrl: "https://ken-frianeza-android-settings-ui.vercel.app/",
     githubUrl: "https://github.com/kenfrianeza-dev/android-settings-ui",
     status: "done",
+    liveUrlDisabled: false
   }
 ];
 
